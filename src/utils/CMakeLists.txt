@@ -19,8 +19,10 @@ set(TARGET_SRC
 add_library(${TARGET_NAME} ${TARGET_SRC})
 target_include_directories(${TARGET_NAME}
     INTERFACE
+    ${Protobuf_INCLUDE_DIRS}
     ${CMAKE_CURRENT_SOURCE_DIR}/..
     )
+
 
 
 
