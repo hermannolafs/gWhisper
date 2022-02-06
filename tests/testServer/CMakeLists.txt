@@ -48,7 +48,8 @@ target_link_libraries(${TARGET_NAME}
     # there)
     # This is done with --no-as-needed in case we link dynamically and
     # --whole-archive in case we link statically.
-    # -Wl,--push-state,--no-as-needed,--whole-archive ${LIB_GRPC++_REFLECTION} -Wl,--pop-state
+    -L -Wl,--whole-archive ${LIB_GRPC++_REFLECTION}
+    # -lgrpc++_reflection -v
 
     protoDoc
     gwhisperUtils
